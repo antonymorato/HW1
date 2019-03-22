@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -17,12 +18,10 @@ public class Main {
     }
 
     public static void task2(){
-
+        System.out.println("Enter number to change:");
         int var=f.nextInt();
         var=~var +1;
         System.out.println(var);
-
-
     }
 
     public static int nod(int a, int b) {
@@ -44,10 +43,19 @@ public class Main {
             return nod((a - b) >> 1, b);
         return nod((b - a) >> 1, a);
     }
+
+    public  static  void changeBit(int x, int n)
+    {System.out.println("x="+x);
+        x ^= 1 << n;
+        System.out.println("x="+x);
+
+    }
     public static void main(String[] args) {
 
         task1();
-        task2();
+      //  task2();
+        changeBit(6,2);
+        changeBit(16,2);
 //int var =-52;
         //var =~var+1;
         //int a=f.nextInt();
